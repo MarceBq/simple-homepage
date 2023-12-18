@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Montserrat:wght@100&family=PT+Sans&family=Pacifico&family=Poppins:wght@100;600&family=Rubik:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    transition: .5s ease all;
+    /* Creando una "condicional" */
+    &.dark{
+        background: black;
+    }
+}
+
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* nav space */
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#hamburguer-show{
+    display: none;
+}
+
+.checkbtn{
+    display: none;
+    width: 40px;
+}
+
+/* NAVEGACION CUANDO ESTA EN DARK CAMBIA EL COLOR  */
+body.dark nav a{
+    color: white;
+}
+
+body.dark nav a:hover{
+    color: white;
+}
+/* ---------------------------------------------- */
+
+
+
+.optios-container{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.optios-container a{
+    padding-top: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #909193;
+    font-weight: 700;
+
+    transition: font-size 0.3s, color 0.3s;
+}
+
+.optios-container a:hover{
+    font-size: 1.125rem;
+}
+
+/* BUTTON CHANGE BACKGROUND */
+.switch{
+    width: 70px;
+    background: black;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    padding: 4px 4px 1px 3px;
+    justify-content: space-around;
+    align-items: center;
+    outline: none;
+
+    &::after {
+        content: "";
+        /* Creando una "caja" */
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: unset;
+        padding-top: 3px;
+        right: 0;
+        border: none;
+        border-radius: 100px;
+        transition: -3s ease all;
+        box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 2);
+        
+    }
+
+    &.active{
+        background: white;
+        
+        &::after{
+            right: unset;
+            left: 0;
+        }
+    }
+
+    span{
+        display: block;
+        background: none;
+        color: white;
+    }
+}
+
+
+/* section container */
+section{
+    width: 100%;
+    min-height: 38rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Description section */
+aside{
+    width: 40%;
+}
+
+h5{
+    font-size: 0.875rem;
+    font-weight: 1000;
+    color: #909193;
+}
+
+h1{
+    font-size: 4rem;
+
+    &.white{
+        color: white;
+    }
+}
+
+.description{
+    font-size: 1.125rem;
+    color: #909193;
+    font-weight:600;
+}
+
+.getters-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.getters-container button{
+    width: 50%;
+    min-height: 50px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #2A4DD0;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 1000;
+
+    transition: transform 0.3s;
+}
+
+.getters-container button:hover{
+    transform: scale(1.1);
+}
+
+
+/* Button and link container */
+.getters-container a{    
+    padding: 10px 0px 0px 0px;
+    color: #2A4DD0;
+    font-weight: 600;
+
+    transition: font-size 0.3s
+}
+
+
+.getters-container a:hover{    
+    font-size: 1.125rem;
+}
+    
+/* Comments space */
+.comments-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments-space{
+    display: flex;
+    margin-top: 30px;
+}
+
+.comments-space p{
+    padding-top: 2px;
+    color: #909193;
+    font-weight: 510;
+    font-size: 0.875rem;
+}
+
+/* image section */
+.img-homepage{
+    width: 600px;   
+}
+
+/* PROBANDO
+#block-menu{
+    display: none;
+} */
+
+
+@media screen and (max-width:1024px) {
+    
+    main{
+        
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Section */
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav{
+        min-height: 35px;
+    }
+
+    nav .switch{
+        width: 80px;
+    }
+
+    .nav .logo{
+        width: 25%;
+    }
+
+    .optios-container{
+        width: 55%;
+        font-size: 0.950rem;
+    }
+
+    .img-homepage{
+        margin: auto;
+        width: 600px;
+         
+    }
+
+    aside{
+        margin-top: 40px;
+        width: 80%;
+        height: 600px;
+    }
+
+    h1{
+        width: 100%;
+        font-size: 3.7rem;
+    }    
+
+    .description{
+        width: 70%;
+    }
+
+    .getters-container{
+        width: 60%;
+    }
+
+    .comments-container{
+        width: 60%;
+    }
+
+    .checkbtn{
+        display: none;
+    }
+
+    #hamburguer-show{
+        display: none;
+    }
+}
+
+@media screen and (max-width:680px) {
+    
+    .switch{
+        display: none;
+    }
+    
+    .optios-container{
+        display: none;
+        background: whitesmoke;
+    }
+
+    /* -------------------------- */
+
+    /* INPUT */
+    .checkbtn{
+        display: block;    
+    }
+
+    /* LABEL */
+    #hamburguer-show{
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 50px;     
+        visibility: hidden;
+    }  
+
+    /* IMAGEN HAMBURGUESA */
+    .hamburger{
+        position: absolute;
+        display: block;
+        width: 40px;
+        margin: 0px;
+        transition: .5s ease all;
+    }
+
+    .add{
+        display: block; 
+        position: fixed;
+        top: 10px; 
+        left: 40%; 
+        width: 60%;
+        height: 100vh; 
+    }
+
+    .add2{
+        display: block;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 410px; 
+        left: 64%;
+        height: 45px;
+        width: 10px; 
+
+        &::after{
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+            top: -3px;
+            right: 3.5px;
+        }
+    }
+
+    nav .optios-container a{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    nav .optios-container a:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    
+    /* Efect */
+    .dark2{
+        background-color: rgb(32, 30, 30);
+        color: white;
+    }
+
+    /* ------------ NO TOCAR NADA :V ------------ */    
+    .hamburger:hover{
+        width: 45px;
+    }
+
+    .img-homepage{ 
+        margin: 80px;
+        width: 500px;
+    }
+
+    aside{
+        width: 90%;
+    }
+
+    .comments-container{
+        width: 75%;
+    }
+
+}

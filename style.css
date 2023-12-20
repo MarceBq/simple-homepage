@@ -350,6 +350,7 @@ h1{
         left: 40%; 
         width: 60%;
         height: 100vh; 
+        padding-top: 60px;
     }
 
     .add2{
@@ -396,7 +397,7 @@ h1{
 
     .img-homepage{ 
         margin: 80px;
-        width: 450px;
+        width: 400px;
     }
 
     aside{
@@ -408,16 +409,27 @@ h1{
     }
 
     #h1-element{
-        width: 70%;
+        margin-top: 10px;
+        font-size: 2.3rem;
+        width: 50%;
     }
 
     .description{
-        margin-top: 30px;
+        margin-top: 20px;
         width: 80%;
+        font-size: 1rem;
     }
 
     .getters-container{
         margin-top: 30px;
-        width: 72%;
+        width: 80%;
+    }
+
+    .comments-container{
+        width: 80%;
+    }
+
+    .comments-space p{
+        font-size: 0.725rem;
     }
 }
